@@ -1,0 +1,22 @@
+#!/usr/bin/env groovy
+
+@Library('shared-library@master') _ //master or whatever branch
+
+pipeline{
+
+      agent any
+        
+        stages{	
+                 
+            stage('sonar-scanner') {
+                       steps {
+                          scanner()
+}
+}
+			 stage ('Sonar-Qualitygate') {
+                    steps {
+                        testsonar()	
+		    }	           
+           }	       	     	         
+}
+}
