@@ -199,10 +199,12 @@
 		</plugins>
 	</build>
 	<name>simple-web-app</name>
+<!--
 	 <distributionManagement>
            <snapshotRepository>
             <id>nexus</id>
-            <url>http://3.142.144.79:8081/repository/nexus_simple/</url>
+            <url>http://35.226.15.200:8081/repository/nexus_simple/</url>
          </snapshotRepository>
 </distributionManagement>	
+-->
 </project>
