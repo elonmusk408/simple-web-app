@@ -8,7 +8,7 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "137.135.83.42:8081"
+        NEXUS_URL = "40.71.90.25:8081"
         NEXUS_REPOSITORY = "nexus-simple"
         NEXUS_CREDENTIAL_ID = "localnexus3"
     }
@@ -46,7 +46,21 @@ pipeline {
                   
                     } 
                 }
+	stage("deploy via shared") {
+            steps {
+                     
+                    script {
+                        def Jname = "${env.JOB_NAME}"
+                       
+                    depsh(Jname)
+               
+                 
+                    }
+            }
+                }    
+	    
     }
+	
 }
 
 
