@@ -46,7 +46,7 @@ pipeline {
                   
                     } 
                 }
-	stage("deploy via shared") {
+	stage("Deploy to Tomcat via shared") {
             steps {
                      
                     script {
